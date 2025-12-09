@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Mama Zowe</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="gallery.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔮</text></svg>">
+</head>
+<body>
+    <!-- WhatsApp Button (Fixed Position) -->
+    <div class="whatsapp-btn-container">
+        <a href="https://wa.me/0743366619?text=Hello%20Mystic%20Healer,%20I%20need%20your%20help" class="whatsapp-btn" target="_blank" id="whatsappBtn">
+            <i class="fab fa-whatsapp"></i>
+            <span class="btn-text">Chat on WhatsApp</span>
+        </a>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-crystal-ball"></i>
+                <h1>Mama Zowe</h1>
+                <h3>Mystic Healer</h3>
+                <span>Traditional Witch Doctor</span>
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="gallery.html" class="active">Gallery</a></li>
+                    <li><a href="index.html#testimonials">Testimonials</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+                <button class="nav-toggle" id="navToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+  <!-- Gallery Hero Section -->
+<section class="gallery-hero">
+    <div class="container">
+        <div class="gallery-hero-content">
+            <h1><span class="demonic-highlight">Spiritual Gallery</span></h1>
+            <p>Explore the tools, rituals, and sacred spaces of ancient healing traditions. Witness the artifacts of spiritual practice passed down through generations.</p>
+            <div class="gallery-hero-scroll" onclick="document.querySelector('.gallery-filter').scrollIntoView({behavior: 'smooth'})">
+                <span class="scroll-text">Explore Gallery</span>
+                <i class="fas fa-chevron-down scroll-icon"></i>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Floating mystical elements -->
+    <div class="floating-artifacts">
+        <div class="artifact" data-type="crystal">🔮</div>
+        <div class="artifact" data-type="skull">💀</div>
+        <div class="artifact" data-type="candle">🕯️</div>
+        <div class="artifact" data-type="book">📖</div>
+        <div class="artifact" data-type="herb">🌿</div>
+    </div>
+</section>
+
+    <!-- Gallery Filter -->
+    <section class="gallery-filter">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="tools">Healing Tools</button>
+                <button class="filter-btn" data-filter="rituals">Rituals</button>
+                <button class="filter-btn" data-filter="herbs">Herbs & Remedies</button>
+                <button class="filter-btn" data-filter="spaces">Sacred Spaces</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="gallery-grid">
+                <!-- Healing Tools -->
+                <div class="gallery-item tools">
+                    <div class="gallery-card">
+                        <div class="gallery-img">
+                            <img src="images/m3.jpg" alt="Crystals for Healing">
+                            <div class="gallery-overlay">
+                                <button class="view-btn" data-index="0">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h3>Healing Crystals</h3>
+                            <p>Natural crystals used for energy work and spiritual protection. Each stone has unique properties for different types of healing.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item tools">
+                    <div class="gallery-card">
+                        <div class="gallery-img">
+                            <img src="images/m7.jpg" alt="Traditional Divination Bones">
+                            <div class="gallery-overlay">
+                                <button class="view-btn" data-index="1">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h3>Divination Bones</h3>
+                            <p>Traditional throwing bones used for fortune telling and spiritual guidance. Passed down through generations of healers.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rituals -->
+                <div class="gallery-item rituals">
+                    <div class="gallery-card">
+                        <div class="gallery-img">
+                            <img src="images/m8.jpg" alt="Cleansing Ritual">
+                            <div class="gallery-overlay">
+                                <button class="view-btn" data-index="2">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h3>Smoke Cleansing</h3>
+                            <p>Sacred smoke ritual using sage and other herbs to purify spaces, remove negative energy, and invite positive vibrations.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item rituals">
+                    <div class="gallery-card">
+                        <div class="gallery-img">
+                            <img src="images/m2.jpg" alt="Ancestral Ritual">
+                            <div class="gallery-overlay">
+                                <button class="view-btn" data-index="3">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h3>Ancestral Connection</h3>
+                            <p>Ritual to communicate with ancestors for guidance and wisdom. A sacred practice to honor those who came before us.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Herbs & Remedies -->
+                <div class="gallery-item herbs">
+                    <div class="gallery-card">
+                        <div class="gallery-img">
+                            <img src="images/m10.jpg" alt="Medicinal Herbs">
+                            <div class="gallery-overlay">
+                                <button class="view-btn" data-index="4">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h3>Healing Herbs Collection</h3>
+                            <p>Traditional medicinal herbs used for physical and spiritual healing. Each herb has specific properties for different ailments.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item herbs">
+                    <div class="gallery-card">
+                        <div class="gallery-img">
+                            <img src="images/m11.jpg" alt="Traditional Potions">
+                            <div class="gallery-overlay">
+                                <button class="view-btn" data-index="5">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h3>Herbal Potions</h3>
+                            <p>Traditional potions and remedies prepared from natural ingredients for spiritual protection and healing.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sacred Spaces -->
+                <div class="gallery-item spaces">
+                    <div class="gallery-card">
+                        <div class="gallery-img">
+                            <img src="images/m12.jpg" alt="Healing Altar">
+                            <div class="gallery-overlay">
+                                <button class="view-btn" data-index="6">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h3>Healing Altar</h3>
+                            <p>Personal altar space where healing rituals are performed. Contains sacred objects, candles, and offerings.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item spaces">
+                    <div class="gallery-card">
+                        <div class="gallery-img">
+                            <img src="images/m13.jpg" alt="Outdoor Ceremony">
+                            <div class="gallery-overlay">
+                                <button class="view-btn" data-index="7">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h3>Outdoor Ceremony Space</h3>
+                            <p>Natural outdoor setting for larger ceremonies and rituals, connecting with earth energies and natural elements.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Items -->
+                <div class="gallery-item tools">
+                    <div class="gallery-card">
+                        <div class="gallery-img">
+                            <img src="images/m14.jpg" alt="Rattles and Shakers">
+                            <div class="gallery-overlay">
+                                <button class="view-btn" data-index="8">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h3>Ceremonial Rattles</h3>
+                            <p>Handmade rattles used in healing ceremonies to create rhythmic sounds that alter consciousness and invite spirits.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item rituals">
+                    <div class="gallery-card">
+                        <div class="gallery-img">
+                            <img src="images/m15.jpg" alt="Water Blessing">
+                            <div class="gallery-overlay">
+                                <button class="view-btn" data-index="9">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h3>Water Blessing Ceremony</h3>
+                            <p>Ritual for cleansing and blessing with sacred water, often performed at natural water sources like rivers or springs.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item herbs">
+                    <div class="gallery-card">
+                        <div class="gallery-img">
+                            <img src="images/m16.jpg" alt="Incense Making">
+                            <div class="gallery-overlay">
+                                <button class="view-btn" data-index="10">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h3>Traditional Incense</h3>
+                            <p>Hand-blended incense made from aromatic herbs, resins, and woods used for purification and spiritual connection.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item spaces">
+                    <div class="gallery-card">
+                        <div class="gallery-img">
+                            <img src="images/m17.jpg" alt="Meditation Space">
+                            <div class="gallery-overlay">
+                                <button class="view-btn" data-index="11">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h3>Meditation Corner</h3>
+                            <p>Peaceful space for meditation, reflection, and connecting with spiritual guides during healing sessions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox-modal" id="lightboxModal">
+        <div class="lightbox-content">
+            <button class="lightbox-close" id="lightboxClose">
+                <i class="fas fa-times"></i>
+            </button>
+            <button class="lightbox-nav prev" id="prevBtn">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="lightbox-nav next" id="nextBtn">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            <div class="lightbox-img-container">
+                <img id="lightboxImg" src="" alt="">
+            </div>
+            <div class="lightbox-info">
+                <h3 id="lightboxTitle"></h3>
+                <p id="lightboxDesc"></p>
+                <div class="lightbox-category">
+                    <span id="lightboxCategory"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-crystal-ball"></i>
+                    <h3>Mama Zowe</h3>
+                    <h3>Mystic Healer</h3>
+                    <p>Traditional Witch Doctor & Spiritual Healer</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="index.html#testimonials">Testimonials</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Connect With Me</h4>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/" target="_blank" title="Follow us on Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="https://www.instagram.com//" target="_blank" title="Follow us on Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://twitter.com/" target="_blank" title="Follow us on Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://www.youtube.com/" target="_blank" title="Subscribe to our YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://wa.me/0743366619" target="_blank" title="Chat on WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                    <div class="footer-whatsapp">
+                        <a href="https://wa.me/0743366619" target="_blank" class="whatsapp-link">
+                            <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Mystic Healer. All rights reserved. | Traditional Spiritual Healing Practices</p>
+                <p class="disclaimer">Note: Images in gallery are for illustrative purposes. Actual rituals and tools may vary.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="gallery.js"></script>
+     <!-- Year Update Script -->
+     <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        
+        // Update active nav link based on current page
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPage = window.location.pathname;
+            const navLinks = document.querySelectorAll('.nav-list a');
+            
+            navLinks.forEach(link => {
+                const linkPage = link.getAttribute('href');
+                if (currentPage.includes(linkPage) || 
+                    (currentPage.includes('gallery') && linkPage.includes('gallery'))) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
